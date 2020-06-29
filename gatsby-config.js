@@ -40,8 +40,12 @@ module.exports = {
             family: `Roboto`,
             variants: [`400`, `500`, `700`],
           },
+          // {
+          //   family: `Prompt`,
+          //   variants: [`300`, `400`, `600`],
+          // },
           {
-            family: `Open Sans`,
+            family: `Charm`,
           },
         ],
       },
