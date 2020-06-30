@@ -18,6 +18,7 @@ const NewsLetter = () => {
 
           <input type="text" name="name" placeholder="your name" className="form-control" />
           <input type="email" name="email" placeholder="your email" className="form-control" />
+          <textarea name="message" rows="10" className="form-textarea"></textarea> 
           <button type="submit" className="btn form-control submit-btn">subscribe</button>
         </form>
       </div>
