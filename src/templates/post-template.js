@@ -1,20 +1,68 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+// import Hero from '../components/Hero'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 import Banner from '../components/Banner'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-// ...GatsbyImageSharpFluid
-const PostTemplate = () => {
-  return <h2>post template</h2>
+
+
+export const query = graphql`
+query GetSinglePost($slug: String) {
+  mdx(frontmatter: {slug: {eq: $slug}}) {
+    frontmatter {
+      category
+      date(formatString: "MMMM Do, YYYY ")
+      title
+      readTime
+      slug
+      image {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    body
+  }
+}
+`
+
+const PostTemplate = ({data}) => {
+  const {mdx:{frontmatter:{title,category,image,date }, body}} = data;
+  return (
+    <Layout>
+      <Wrapper>
+        {/* post */}
+        <article>
+          <Image fluid={image.childImageSharp.fluid} />
+          <div className="post-info">
+             <span>{category}</span>
+             <h2>{title}</h2>
+             <p>{date}</p>
+             <div className="underline"></div>
+          </div>
+          <MDXRenderer>
+             {body}
+          </MDXRenderer>
+        </article>
+        {/* banner */}
+        <article>
+          <Banner />
+        </article>
+      </Wrapper>
+    </Layout>
+  )
 }
 
 const Wrapper = styled.section`
+
   width: 85vw;
   max-width: 1100px;
   margin: 0 auto;
+  margin-top: 8rem;
   margin-bottom: 4rem;
   .post-info {
     margin: 2rem 0 4rem 0;
@@ -44,7 +92,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     & {
-      width: 92vw;
+      width: 85vw;
     }
   }
   @media (min-width: 1170px) {
@@ -56,4 +104,7 @@ const Wrapper = styled.section`
   }
 `
 
+
 export default PostTemplate
+
+

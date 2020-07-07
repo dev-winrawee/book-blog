@@ -10,13 +10,13 @@ const Links = ({ styleClass, children }) => {
       </li>
       <li>
         <Link to="/posts" className="page-link">
-        บทความ
+        เกร็ดความรู้จากหนังสือ
         </Link>
         {children}
       </li>
       <li>
         <Link to="/newsletter" className="page-link">
-        ติดต่อ
+        ติดต่อผู้เขียน
         </Link>
       </li>
       <li>

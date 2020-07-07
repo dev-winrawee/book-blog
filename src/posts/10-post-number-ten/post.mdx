@@ -1,0 +1,57 @@
+---
+title: ฮิกส์โบซอน ผู้กำเนิดสรรพสิ่ง?
+slug: higgs
+image: ./images/higg.jpg
+date: 2020-06-29
+author: วิน รวีร์
+category: สุดแสงสูญ
+readTime: 34
+---
+
+import {Link} from 'gatsby';
+import {FiInfo} from 'react-icons/fi'
+import {Counter, LikeButton} from '../../components/Complete'
+
+<section className="mdx-page">
+
+ทุกสิ่งเป็นไปได้เมื่อมนุษย์ค้นพบฮิกส์ คืออนุภาคของพระเจ้าดังนั้นพบฮิกส์ก็เหมือนพบว่าพระเจ้าสร้างโลกมาได้อย่างไรถึงแม้ว่าฮิกส์จะพบได้ยากในจักรวาล. แต่ล่าสุดนักวิทยาศาสตร์สามารถพบมันแอบซ่อนอยู่dnaมนุษย์ อภิมหาโครงการจึงกำเนิดเป้าหมายเพื่อเขย่าวงการวิทยาศาสตร์ในอนาคต.
+
+
+
+<Link to="/" className="btn center-btn">back to main</Link>
+
+<div className="nice-text">
+    <h3>nicetext</h3>
+    <FiInfo className="nice-text-icon"></FiInfo>
+    I'm baby chartreuse meggings banjo, yr man bun sustainable craft beer. Kinfolk hammock pour-over seitan activated charcoal quinoa affogato taxidermy messenger bag. Wolf before they sold out man bun literally chicharrones master cleanse irony. Adaptogen post-ironic quinoa shaman tilde chillwave lo-fi. Trust fund cardigan beard, next level fashion axe raclette mustache bicycle rights organic. Kale chips offal yr, venmo thundercats butcher salvia cardigan readymade air plant helvetica flexitarian listicle celiac succulents.
+</div>
+
+<Counter />
+
+<h2>React Components</h2>
+
+```jsx
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+
+```
+
+<LikeButton />
+
+</section>
