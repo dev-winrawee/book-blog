@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const query = graphql`
   {
-    stateImage: file(relativePath: {eq: "สุดแสงสูญ.png"}) {
+    stateImage: file(relativePath: {eq: "สุดแสงสูญ-2.png"}) {
       childImageSharp {
         fluid(maxWidth:600) {
           ...GatsbyImageSharpFluid_tracedSVG
