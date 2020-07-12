@@ -64,11 +64,12 @@ const Wrapper = styled.section`
     display: none;
   }
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 750px) {
     .info {
       display:block;
       margin:auto;
       text-align: center;
+      width: 100%;
   
     }
     .center {
@@ -79,7 +80,7 @@ const Wrapper = styled.section`
       /* margin-top: 0; */
     }
     .image {
-      margin: 3rem;
+      margin: 1rem;
     }
     .image img {
 
@@ -94,9 +95,10 @@ const Wrapper = styled.section`
     font-size: 2.8rem;
     color: #4c1929;
     text-transform: uppercase;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     padding: 0 1rem;
     letter-spacing: 6px;
+    line-height:1;
     }
     .info h2 {
     font-size: 1.8rem;
@@ -106,22 +108,22 @@ const Wrapper = styled.section`
     letter-spacing: 6px;
     }
     .info h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     /* font-style: italic; */
-    line-height: 2.5;
-    width: 90%;
+    line-height: 2;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 2rem;
     } 
     .info h4 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     font-style: italic;
-    line-height: 2.5;
-    width: 95%;
+    line-height: 2;
+    width: 100%;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     }
 
   
