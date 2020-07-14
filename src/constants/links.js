@@ -19,11 +19,11 @@ const Links = ({ styleClass, children }) => {
         ติดต่อผู้เขียน
         </Link>
       </li>
-      {/* <li>
+      <li>
         <Link to="/post" className="page-link">
         สาระ
         </Link>
-      </li> */}
+      </li>
     </ul>
   )
 }

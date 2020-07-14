@@ -1,30 +1,30 @@
 import React from 'react'
-import {useStaticQuery, graphql} from "gatsby";
+// import {useStaticQuery, graphql} from "gatsby";
 import Img from "gatsby-image";
 import styled from 'styled-components';
 
 
-const query = graphql`
-  {
-    stateImage: file(relativePath: {eq: "สุดแสงสูญ-2.png"}) {
-      childImageSharp {
-        fluid(maxWidth:600) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     stateImage: file(relativePath: {eq: "สุดแสงสูญ-2.png"}) {
+//       childImageSharp {
+//         fluid(maxWidth:600) {
+//           ...GatsbyImageSharpFluid_tracedSVG
+//         }
+//       }
+//     }
+//   }
+// `
 
 
-const State = ({titleA,titleB,infoA,infoB, children}) => {
-  const {stateImage} = useStaticQuery(query);
+const State = ({img,titleA,titleB,infoA,infoB, children}) => {
+  // const {stateImage} = useStaticQuery(query);
   return (
     <Wrapper>
       <div className="center">
       <article className="image">
         <div className="container">
-        <Img fluid={stateImage.childImageSharp.fluid} alt="winrawee book" />
+        <Img fluid={img} alt="winrawee book" />
         </div>
       </article>
       <article className="info">

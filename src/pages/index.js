@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+// import {Link} from 'gatsby'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import State from '../components/state'
@@ -16,6 +16,7 @@ export default ({data}) => {
       <SEO title ="หน้าหลัก"/>
       <Hero home= "true" img={data.book.childImageSharp.fluid}>
         <State 
+            img={data.stateImage.childImageSharp.fluid}
             infoA = "ศาสนพิธีเมื่อพันกว่าปี กำลังท้าทายวิทยาศาสตร์ในอนาคต ทว่า..หลายคนต้องสังเวยด้วยชีวิต"
             infoB = "ครั้งแรกในการพบกันของนักดาราศาสตร์กับนักโบราณคดี เพื่อหยุดยั้งโศกนาฏกรรมครั้งสำคัญของโลก"
             titleA = "สุดแสงสูญ"
@@ -44,9 +45,16 @@ book:file(relativePath:{eq:"wall-hero.jpg"}) {
   }
   
 }
+stateImage: file(relativePath: {eq: "สุดแสงสูญ-2.png"}) {
+    childImageSharp {
+      fluid(maxWidth:600) {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
 allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
       nodes {
-        excerpt(pruneLength:200)
+        excerpt(truncate: true, pruneLength:200)
         frontmatter {
           title
           author
