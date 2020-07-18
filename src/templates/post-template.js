@@ -99,7 +99,8 @@ const Wrapper = styled.section`
     & {
       display: grid;
       grid-template-columns: 1fr 200px;
-      column-gap: 4rem;
+      grid-gap: 1rem;
+      grid-column-gap: 4rem;
     }
   }
 `

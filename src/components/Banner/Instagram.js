@@ -43,6 +43,10 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    grid-gap: 1rem;
+    grid-column-gap: 1rem;
+    margin-bottom: 1rem;
+    
   }
 `
 

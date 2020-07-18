@@ -117,7 +117,9 @@ const Wrapper = styled.article`
     & {
       display: grid;
       grid-template-columns: 30rem 1fr;
-      column-gap: 1.5rem;
+      grid-gap: 1.5rem;
+      grid-column-gap: 1.5rem;
+      /* column-gap: 1.5rem; */
       .info {
         text-align: left;
       }

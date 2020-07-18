@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   .post {
     display: grid;
     grid-template-columns: 75px 1fr;
+    grid-gap: 1rem;
     column-gap: 1rem;
     margin-bottom: 1rem;
   }
